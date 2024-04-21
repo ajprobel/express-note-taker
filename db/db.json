@@ -1,0 +1,22 @@
+[
+ {
+  "title": "Test Title",
+  "text": "Test text"
+ },
+ {
+  "title": "Test Note 2",
+  "text": "This is the body for Test Note 2"
+ },
+ {
+  "title": "Test Note 3",
+  "text": "I've added a space parameter onto JSON.stringify of 1"
+ },
+ {
+  "title": "This Should Render Now",
+  "text": "The index.js file in the starter code had \"getAndRenderNotes();\" happening before \"renderActiveNote();\" so the note would appear on page refresh, but not immediately"
+ },
+ {
+  "title": "sdfsdfsd",
+  "text": "sdfsdfsdf"
+ }
+]
