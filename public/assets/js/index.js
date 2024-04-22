@@ -34,7 +34,8 @@ const getNotes = () =>
     headers: {
       'Content-Type': 'application/json'
     }
-  });
+  })
+  .then(console.log("notes have been 'got'"));
 
 const saveNote = (note) =>
   fetch('/api/notes', {
@@ -54,10 +55,12 @@ const deleteNote = (id) =>
   });
 
 const renderActiveNote = () => {
+  console.log("we are now in renderActiveNote()")
   hide(saveNoteBtn);
   hide(clearBtn);
 
   if (activeNote.id) {
+    console.log("line 62 reached")
     show(newNoteBtn);
     noteTitle.setAttribute('readonly', true);
     noteText.setAttribute('readonly', true);

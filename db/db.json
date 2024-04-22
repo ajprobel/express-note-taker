@@ -5,18 +5,22 @@
  },
  {
   "title": "Test Note 2",
-  "text": "This is the body for Test Note 2"
+  "text": "This should have a random id",
+  "id": "zfxyox7gp0apudhjqf36"
  },
  {
   "title": "Test Note 3",
-  "text": "I've added a space parameter onto JSON.stringify of 1"
+  "text": "This should have a random id as well",
+  "id": "zfxyox7gp0apudhjqf36"
  },
  {
-  "title": "This Should Render Now",
-  "text": "The index.js file in the starter code had \"getAndRenderNotes();\" happening before \"renderActiveNote();\" so the note would appear on page refresh, but not immediately"
+  "title": "sdfsdf",
+  "text": "sdfsdf",
+  "id": "5n70rsvtu2v2nm4icp"
  },
  {
-  "title": "sdfsdfsd",
-  "text": "sdfsdfsdf"
+  "title": "wwwwww",
+  "text": "wwwwwww",
+  "id": "c9a52ke4laczitcywi"
  }
 ]

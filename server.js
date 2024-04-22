@@ -1,6 +1,8 @@
 const express = require('express');
 const path = require('path');
 const fs = require('fs');
+const uniqueIDGenerator = require('generate-unique-id');
+
 
 const app = express();
 const PORT = 3002;
@@ -18,7 +20,8 @@ app.get('/notes', (req, res) => {
 });
 
 app.get('/api/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './db/db.json'))
+    res.sendFile(path.join(__dirname, './db/db.json'));
+    console.info("json file has been read")
 });
 
 app.post('/api/notes', (req, res) => {
@@ -27,15 +30,21 @@ app.post('/api/notes', (req, res) => {
     const { title, text } = req.body;
 
     if (title && text) {
-        // take that shit and make a note
+        const createID = uniqueIDGenerator({
+            length: 18
+        });
+        // take deconstructed request body and make it into an object
         const newEntry = {
             title,
-            text
+            text,
+            id: createID
         };
+        // get the current data off of the db.json file
         fs.readFile("./db/db.json", "utf8", (err, data) => {
             if (err) {
                 console.error(err);
             } else {
+                // parse the data from db.json, and add the new note object to it
                 const currentReviews = JSON.parse(data);
                 currentReviews.push(newEntry);
                 fs.writeFile("./db/db.json", JSON.stringify(currentReviews, null, 1), (error) => {
@@ -43,13 +52,13 @@ app.post('/api/notes', (req, res) => {
                 });
             }
         });
+        res.send(newEntry);
     } else {
         console.log("Error occurred while trying to save note. Please ensure note has a title and text");
         res.status(500)
     }
 
 });
-
 
 // Wildcard route to handle all other requests
 app.get('*', (req, res) => {
