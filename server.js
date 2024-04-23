@@ -13,17 +13,17 @@ app.use(express.static('public'));
 
 // send landing page
 app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'))
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 // enter into the main notes page
 app.get('/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/notes.html'))
+    res.sendFile(path.join(__dirname, '/public/notes.html'))
 });
 
 // send the information in the json file
 app.get('/api/notes', (req, res) => {
-    res.sendFile(path.join(__dirname, './db/db.json'));
+    res.sendFile(path.join(__dirname, '/db/db.json'));
     console.info("json file has been read")
 });
 
@@ -89,7 +89,7 @@ app.post('/api/notes', (req, res) => {
 
 // Wildcard route to handle all other requests
 app.get('*', (req, res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'))
+    res.sendFile(path.join(__dirname, '/public/index.html'))
 });
 
 app.listen(PORT, () => {
