@@ -5,7 +5,7 @@ const uniqueIDGenerator = require('generate-unique-id');
 
 
 const app = express();
-const PORT = process.env.port || 3002;
+const PORT = process.env.PORT || 3002;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
