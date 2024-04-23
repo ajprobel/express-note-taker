@@ -18,7 +18,7 @@ N/A
 
 ## Usage
 
-To use the deployed application, follow [this link](https://youtube.com).
+To use the deployed application, follow [this link](https://express-note-taker-ajp-657ad63c2799.herokuapp.com/).
 
 Users will be greeted by a landing page with a title and a button. Click on the "Get Started" button to enter into the Notes page.
 
