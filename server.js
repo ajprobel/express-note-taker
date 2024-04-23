@@ -5,31 +5,37 @@ const uniqueIDGenerator = require('generate-unique-id');
 
 
 const app = express();
-const PORT = 3002;
+const PORT = process.env.port || 3002;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static('public'));
 
+// send landing page
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'))
 });
 
+// enter into the main notes page
 app.get('/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './public/notes.html'))
 });
 
+// send the information in the json file
 app.get('/api/notes', (req, res) => {
     res.sendFile(path.join(__dirname, './db/db.json'));
     console.info("json file has been read")
 });
 
+// logic for saving note
 app.post('/api/notes', (req, res) => {
     console.log("Initiating process to save new note");
 
+    // deconstruct the request
     const { title, text } = req.body;
 
     if (title && text) {
+        // creating a new ID each time this is called
         const createID = uniqueIDGenerator({
             length: 18
         });
@@ -85,7 +91,6 @@ app.post('/api/notes', (req, res) => {
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'))
 });
-
 
 app.listen(PORT, () => {
     console.log(`Server is up and running on ${PORT}`)

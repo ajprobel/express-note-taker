@@ -2,13 +2,15 @@
 
 ## Description
 
-Every project needs a professional README to help document information about the project, and to help users interface with the application/website/product itself.
+Sometimes throughout our busy days, we need to take a quick second to write something down: something to remember for later; a reminder for next week; a creative thought for a new movie that just popped into your head. We don't always have a quick way to save that idea, and sometimes the solution of writing it down on a post-it note for later ends up with the post-it note getting thrown away or lost forever.
 
-Sometimes it can be difficult to create a new README from scratch, so I've programmed a tool that should make this process a lot easier!
+This application aims to help solve this issue! This is a quick note taker that utilizes express.js to run a server to not only be easy to access, but also preserve any notes/reminders you wish to save.
 
-Using Node.js, NPM, and Inquirer, this application lets users answer prompts via the terminal that will then be passed into the JavaScript file. From there, a new README.md file will be created with all of the information that has been input from the user.
+Users can access this application, write down any note or reminder they wish, and come back to it whenever they please thanks to data persistence.
 
-While completing this project, I learned about how best to utilize different forms of input for inquirer, and making sure any NPM dependencies were taken care of.
+Completing this project was a great way to utilize best practices for handling html and data route requests through express.js, and focused a lot on accessing/writing data in a stored json file (and assigning unique identification to each piece of data)!
+
+Instructions for usage are down below.
 
 ## Installation
 
@@ -47,6 +49,10 @@ Application functionality designed by me, James Probel, with starter code and gu
 
 Thanks to NPM gnerate-unique-id for handling logic for creating new IDs for each new note:
 https://www.npmjs.com/package/generate-unique-id
+
+Thank you to MDN Web Docs for the brush-up of JSON methods:
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON
+
 
 
 ## License
