@@ -60,6 +60,27 @@ app.post('/api/notes', (req, res) => {
 
 });
 
+// --------- Attempt to start the DELETE functionality - not finished -----------
+// app.delete('api/notes/:id', (req, res) => {
+//     const requestedID = req.params.id;
+//     fs.readFile("./db/db.json", "utf8", (err, data) => {
+//         if (err) {
+//             console.error(err);
+//         } else {
+//             const currentReviews = JSON.parse(data);
+//             const reviewsToWrite = [];
+//             for (let i = 0; i < currentReviews.length; i++) {
+//                 if (requestedID !== currentReviews[i].id) {
+//                     reviewsToWrite.push(currentReviews[i])
+//                 };
+//             };
+//             fs.writeFile("./db/db.json", JSON.stringify(reviewsToWrite, null, 1), (error) => {
+//                 error ? console.error(error) : console.log("Note Deleted Successfully!")
+//             });
+//         };
+//     });
+// })
+
 // Wildcard route to handle all other requests
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, './public/index.html'))

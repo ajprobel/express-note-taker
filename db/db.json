@@ -1,26 +1,7 @@
 [
  {
-  "title": "Test Title",
-  "text": "Test text"
- },
- {
-  "title": "Test Note 2",
-  "text": "This should have a random id",
+  "title": "Click Me!",
+  "text": "Clicking a created note will bring the title and body of the note into this box - create a new note by selecting the 'New Note' button in the top right corner!",
   "id": "zfxyox7gp0apudhjqf36"
- },
- {
-  "title": "Test Note 3",
-  "text": "This should have a random id as well",
-  "id": "zfxyox7gp0apudhjqf36"
- },
- {
-  "title": "sdfsdf",
-  "text": "sdfsdf",
-  "id": "5n70rsvtu2v2nm4icp"
- },
- {
-  "title": "wwwwww",
-  "text": "wwwwwww",
-  "id": "c9a52ke4laczitcywi"
  }
 ]
